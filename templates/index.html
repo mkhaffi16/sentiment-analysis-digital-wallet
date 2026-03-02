@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../static/img/web/usu.png" />
+  <title>Tugas Akhir</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Proza+Libre:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../static/css/custom.css" />
+</head>
+
+<body data-spy="scroll" data-target="#spy" data-offset="200">
+  <!-- navigasi -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="spy">
+    <div class="container">
+      <a class="navbar-brand" href="#beranda">TUGAS AKHIR</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#beranda">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#training">Training</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testing">Testing</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- content -->
+ 
+  <section id="beranda">
+    <div class="row">
+      <div class="col-md-6 pr-3">
+        <div class="caption">SENTIMEN ANALISIS BERBASIS ASPEK TERHADAP REVIEW APLIKASI 
+          DIGITAL WALLET MENGGUNAKAN METODE EXTREME GRADIENT 
+          BOOSTING
+        </div>
+        <br />
+        <p><b>MUHAMMAD KHAFFI IRWAN - 181402102</b></p>
+        <div class="py-5">
+          <a href="#training" class="bt-primary-lg"> Training & Testing </a>
+        </div>
+        <p class="institusi">
+          Program Studi S1 Teknologi Informasi
+          <br />
+          Fakultas Ilmu Komputer dan Teknologi Informasi
+          <br />
+          Universitas Sumatera Utara
+          <br />
+          2023
+        </p>
+
+      </div>
+      <div class="col-md-6 my-auto">
+        <img src="../static/img/web/ewallet.jpg" alt="" width="450px" />
+
+      </div>
+    </div>
+  </section>
+  
+    <div class="container">
+      <div data-aos="fade-right" data-aos-delay="600">
+      <section id="training" class="content">
+        <h2 class="judul">TRAINING</h2>
+  
+        <br>
+        <div class="sub-judul">
+          Upload Dataset untuk proses preprosesing dan training
+        </div>
+        <br>
+       
+        <div class="row">
+          <div class="col-md-12">
+            <form id="formTrain" action="" enctype="multipart/form-data">
+              <div class="form-row">
+                <div class="form-group col-md-2"></div>
+                  <div class="form-group col-md-6">
+                    
+                      <label for="trainDataset">Upload Dataset</label>
+                      <input type="file" name="trainDataset" id="trainDataset" class="form-control" required />
+        
+                  </div>   
+
+                  <div class="form-group col-md-1"></div>
+                  
+                  <div class="col-md-2">
+                    <div class="py-1"></div>
+                      <div class="text-center py-3">
+                        <button type="button" class="bt bt-secondary mr-4 d-none" id="btnTrainReset">Reset
+                          </button>
+                          <button type="submit" id="btnTraining" class="bt bt-primary" title="Mulai Training">Mulai Training
+                        </button>
+                        </div>
+                  </div>
+                  
+              </div>
+              
+            </form>
+            
+          </div>
+        </div>
+        
+        <br></br>       
+  
+        <div class="sub-judul">Hasil Preprocessing</div>
+        
+        <div id="trainkosong" class="trainkosong">
+          <div id="spinner" class="text-center d-none">
+            <div class="lds-ellipsis">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="small py-4">
+              Training sedang berjalan ...
+            </div>
+          </div>
+        </div>
+        <div id="hasilTraining" class="d-none">
+          <div class="row hasil-training py-3">
+            <table id="tbPrep" class="table" style="width: 100%;">
+              <thead>
+                <tr>
+                  <th>content</th>
+                  <th>Preprocess</th>
+                  <th>CustomerService</th>
+                  <th>FiturAplikasi</th>
+                  <th>UserExperience</th>
+                  <th>Verifikasi</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+  
+      </section>
+    </div>
+      
+    
+    
+    <hr>
+
+
+    <div data-aos="fade-right" data-aos-delay="600">
+      <section id="testing" class="content">
+        <h2 class="judul">TESTING</h2>
+        <br>
+        <div class="sub-judul">
+          Upload Dataset Untuk Proses Testing
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <form id="formTest" action="" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="text-center col-md-3">
+                  <div class="form-group">
+                    <label for="testDataset"></label>
+                    <input type="file" name="testDataset" id="testDataset" class="form-control" required />
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="py-1"></div>
+                  <div class="text-center py-3">
+                    <button type="button" class="bt bt-secondary mr-4 disabled d-none" id="btnTestReset">
+                      Reset
+                    </button>
+                    <button type="submit" id="btnTest" class="bt bt-primary">
+                      Mulai Testing
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            
+            <div class="sub-judul">Hasil Prediksi</div>          
+            <div id="testkosong" class="testkosong">
+              <div id="test_spinner" class="text-center d-none">
+                <div class="lds-ellipsis">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="small py-4">
+                  Testing sedang berjalan ...
+                </div>              
+              </div>
+            </div>
+            <div id="hasilTest" class="py-4 d-none">
+              
+              <table id="tbResult" class="table" style="width: 100%;">
+                <thead>
+                  <tr>
+                    <th rowspan="2">content</th>
+                    <th rowspan="2">Preprocess</th>
+                    <th colspan="4" style="text-align: center;">Prediksi</th>
+                  </tr>
+                  <tr>
+                    <th>CustomerService</th>
+                    <th>FiturAplikasi</th>
+                    <th>UserExperience</th>
+                    <th>Verifikasi</th>
+                  </tr>
+                </thead>
+              </table>
+
+              
+              <div class="py-5"></div>
+              <div class="sub-judul">Classification Report dan Confussion Matrix</div>     
+              <div class="row"> 
+                <div class="col-md-7">
+                  <table id="tbReportCustomerService" class="table" style="width: 100%;">
+                    <thead>
+                      <tr>
+                        <th> </th>
+                        <th>precision</th>
+                        <th>recall</th>
+                        <th>f1-Score</th>
+                        <th>support</th>
+                      </tr>
+                    </thead>
+                  </table>
+                 
+                </div>
+                <div class="col-md-5">
+                  <img src="" alt="heatmap CustomerService" id="hm_CustomerService" width="100%">
+                </div>
+              </div>
+
+              <div class="py-9"></div>
+              <div class="row">
+                <div class="col-md-7">
+                  <table id="tbReportFiturAplikasi" class="table" style="width: 100%;">
+                    <thead>
+                      <tr>
+                        <th> </th>
+                        <th>precision</th>
+                        <th>recall</th>
+                        <th>f1-Score</th>
+                        <th>support</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="col-md-5">
+                  <img src="" alt="heatmap FiturAplikasi" id="hm_FiturAplikasi" width="100%">
+                </div>
+              </div>
+
+              <div class="py-9"></div>
+              <div class="row">
+                <div class="col-md-7">
+                  <table id="tbReportUserExperience" class="table" style="width: 100%;">
+                    <thead>
+                      <tr>
+                        <th> </th>
+                        <th>precision</th>
+                        <th>recall</th>
+                        <th>f1-Score</th>
+                        <th>support</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="col-md-5">
+                  <img src="" alt="heatmap UserExperience" id="hm_UserExperience" width="100%">
+                </div>
+              </div>
+
+              <div class="py-9"></div>
+              <div class="row">
+                  <div class="col-md-7">
+                    <table id="tbReportVerifikasi" class="table" style="width: 100%;">
+                      <thead>
+                        <tr>
+                          <th> </th>
+                          <th>precision</th>
+                          <th>recall</th>
+                          <th>f1-Score</th>
+                          <th>support</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                  <div class="col-md-5">
+                    <img src="" alt="heatmap Verifikasi" id="hm_Verifikasi" width="100%">
+                  </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div data-aos="fade-right" data-aos-delay="600">
+      <section id="testing-real-time" class="content">
+        <h2 class="judul">Data Testing - Uji Coba Realtime</h2>
+        <br>
+        <div class="sub-judul">
+          Masukkan Text
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-12">
+            <form id="formTestRealTime" action="" enctype="multipart/form-data">
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="text-center col-md-3">
+                  <div class="form-group">
+                    <label for="realtime_input"></label>
+                    <input type="text" name="realtime_input" id="realtime_input" class="form-control" placeholder="Masukkan Kalimat" >
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="py-1"></div>
+                  <div class="text-center py-3">
+                    <button type="button" class="bt bt-secondary mr-4 disabled d-none" id="btnTestResetrt">
+                      Reset
+                    </button>
+                    <button type="submit" id="btnTestrt" class="bt bt-primary">
+                      Mulai Testing
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <hr>
+
+        <div class="row">
+          
+          <div class="col-md-12">
+            
+            <div class="sub-judul">Hasil Prediksi Real Time</div>          
+            <div id="realtime-kosong" class="realtime-kosong">
+              <div id="test_spinner_rt" class="text-center d-none">
+                <div class="lds-ellipsis">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <div class="small py-4">
+                  Proses sedang berjalan ...
+                </div>              
+              </div>
+            </div>
+            <div id="hasilTestRealTime" class="py-4 d-none"> 
+              <table class="table table-md" style="width: 100%;" >
+                <tr>
+                    <th>Input</th>
+                    <th>CustomerService</th>
+                    <th>FiturAplikasi</th>
+                    <th>UserExperience</th>
+                    <th>Verifikasi</th>
+                </tr>
+                <tr>
+                  <td><b id="kalimat-pred"></b></td> 
+                  <td><b id="CustomerService-pred"></b></td>
+                  <td><b id="FiturAplikasi-pred"></b></td>
+                  <td><b id="UserExperience-pred"></b></td>
+                  <td><b id="Verifikasi-pred"></b></td>
+                </tr>
+              </table> 
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+   </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../static/js/custom.js"></script>
+</body>
+
+</html>
